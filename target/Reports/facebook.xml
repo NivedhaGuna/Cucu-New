@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="54.8435">
+    <testcase classname="To validate the forgotten password functionality" name="Validate the forgotten password with invalid mobile number" time="15.15863">
+        <system-out><![CDATA[Given User should launch the browser and load the url.......................passed
+When User should click the forgotten password link..........................passed
+And User should enter the invalid mobile number in the textbox..............passed
+And User should click the search button.....................................passed
+Then User should navigate to temp blocked page..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="To validate login functionality in Fb" name="To validate the login functionality of facebook with invalid username and invalid password" time="17.612303">
+        <failure message="java.lang.AssertionError: Verify credential&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.steps.LoginSteps.user_should_navigate_to_incorrect_credential_page(LoginSteps.java:53)&#13;&#10;&#9;at ✽.User should navigate to incorrect credential page(file:src/test/resources/Feature/Login.feature:10)&#13;&#10;"><![CDATA[Given User should launch the browser and load the url.......................passed
+And User should maximize screen.............................................passed
+When User should enter invalid username "Anil" and invalid password "Anil@123".passed
+And User should click the login button......................................passed
+Then User should navigate to incorrect credential page......................failed
+
+StackTrace:
+java.lang.AssertionError: Verify credential
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.steps.LoginSteps.user_should_navigate_to_incorrect_credential_page(LoginSteps.java:53)
+	at ✽.User should navigate to incorrect credential page(file:src/test/resources/Feature/Login.feature:10)
+]]></failure>
+    </testcase>
+    <testcase classname="To validate login functionality in Fb" name="To validate the login functionality of facebook with valid username and invalid password" time="22.072567">
+        <system-out><![CDATA[Given User should launch the browser and load the url.......................passed
+When User should enter valid username and invalid password..................passed
+And User should click the login button......................................passed
+Then User should navigate to incorrect credential page......................passed
+]]></system-out>
+    </testcase>
+</testsuite>
